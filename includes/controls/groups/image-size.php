@@ -96,6 +96,7 @@ class Group_Control_Image_Size extends Group_Control_Base {
 			$image_class .= " attachment-$size size-$size";
 			$image_attr = [
 				'class' => trim( $image_class ),
+				'title' => trim(Control_Media::get_image_title( $image )),
 			];
 
 			$html .= wp_get_attachment_image( $image['id'], $size, false, $image_attr );
